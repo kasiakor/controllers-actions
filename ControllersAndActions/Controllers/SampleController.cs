@@ -15,5 +15,27 @@ namespace ControllersAndActions.Controllers
             return View("MyView");
             //return Content("Hi there!");
         }
+        public ActionResult Myip()
+        {
+            string clientIP = Request.UserHostAddress;
+            string serverName = Server.MachineName;
+            return Content(serverName);
+        }
+
+        public HttpNotFoundResult MyResults()
+        {
+           
+            return HttpNotFound();
+        }
+
+        public RedirectResult MyRedirect()
+        {
+            return Redirect("/Sample/Myip");
+        }
+
+        public EmptyResult MyEmpty()
+        {
+            return new EmptyResult();
+        }
     }
 }
