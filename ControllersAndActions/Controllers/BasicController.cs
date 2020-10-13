@@ -20,6 +20,6 @@ namespace ControllersAndActions.Controllers
             //HttpContext.Current.IsDebuggingEnabled : true
             //HttpContext.Current.User.Identity.IsAuthenticated :  false
             requestContext.HttpContext.Response.Write(string.Format("Controller: {0}, Action: {1}", controller, action));
-        }   
+        }
     }
 }
