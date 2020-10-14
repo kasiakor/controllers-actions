@@ -33,10 +33,12 @@ namespace ControllersAndActions.Controllers
         public RedirectToRouteResult Redirect2()
         {
             //routing system generates url
+            //temporary redirect
             return RedirectToRoute(new { 
                 controller = "Example",
                 action ="Index",
                 ID = "MyID"
+            //return RedirectPermanent("/Example/Index");
             });
         }
     }
