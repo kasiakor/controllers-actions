@@ -11,7 +11,8 @@ namespace ControllersAndActions.Controllers
         // GET: Example
         public ViewResult Index()
         {
-            return View("Homepage");
+            DateTime date = DateTime.Now;
+            return View(date);
             //return View("~/Index/Other/Index.cshtml");
             //return View("Index", "AlternativeView")
         }
