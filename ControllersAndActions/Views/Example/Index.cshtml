@@ -6,3 +6,10 @@
 <h2>Index</h2>
 <div>The day is @Model.DayOfYear</div>
 
+<p>TempData</p>
+<div>@TempData["Message"]</div>
+<div>@TempData["Date"]</div>
+
+<p>casting object to get the property dayofweek</p>
+<div>@(((DateTime)TempData["Date"]).DayOfWeek)</div>
+

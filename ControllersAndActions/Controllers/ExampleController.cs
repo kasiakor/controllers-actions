@@ -57,5 +57,33 @@ namespace ControllersAndActions.Controllers
             return RedirectToAction("Index", "Sample");
             //return RedirectToActionPermanent("Index", "Sample");
         }
+
+        public RedirectToRouteResult Redirect5()
+        {
+            //preserve data while redirecting using TempData
+            TempData["Message"] = "Hello";
+            TempData["Date"] = DateTime.Now;
+            return RedirectToAction("Index");
+            //return RedirectToActionPermanent("Index", "Sample");
+        }
+
+        public HttpStatusCodeResult StatusCode()
+        {
+       //initiate the class directly, no helper method
+            return new HttpStatusCodeResult(404, "Url cannot be serviced");
+            //return RedirectToActionPermanent("Index", "Sample");
+        }
+
+        public HttpStatusCodeResult StatusCode2()
+        {
+            //generates 404 result
+            return HttpNotFound();
+        }
+
+        public HttpStatusCodeResult StatusCode3()
+        {
+            //generates 401 result
+            return new HttpUnauthorizedResult();
+        }
     }
 }
