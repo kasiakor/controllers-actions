@@ -41,5 +41,21 @@ namespace ControllersAndActions.Controllers
             //return RedirectPermanent("/Example/Index");
             });
         }
+
+        public RedirectToRouteResult Redirect3()
+        {
+            //in the same controller
+            //temporary redirect
+            return RedirectToAction("Index2");
+            //return RedirectToActionPermanent("Index2");
+        }
+
+        public RedirectToRouteResult Redirect4()
+        {
+            //another controller
+            //temporary redirect
+            return RedirectToAction("Index", "Sample");
+            //return RedirectToActionPermanent("Index", "Sample");
+        }
     }
 }
