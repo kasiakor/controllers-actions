@@ -16,5 +16,12 @@ namespace ControllersAndActions.Controllers
             //return View("~/Index/Other/Index.cshtml");
             //return View("Index", "AlternativeView")
         }
+
+        public ViewResult Index2()
+        {
+            //dynamic object
+            ViewBag.Date = DateTime.Now;
+            return View();  
+        }
     }
 }
