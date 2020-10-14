@@ -26,7 +26,18 @@ namespace ControllersAndActions.Controllers
 
         public RedirectResult Redirect()
         {
+            //literal url
             return Redirect("/Example/Index2");
+        }
+
+        public RedirectToRouteResult Redirect2()
+        {
+            //routing system generates url
+            return RedirectToRoute(new { 
+                controller = "Example",
+                action ="Index",
+                ID = "MyID"
+            });
         }
     }
 }
